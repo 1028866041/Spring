@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+userData:
+  name: mc
+  age: 20
+  password: nopassword
+
+userProperties:
+  id: 1
+  name: mc
+  age: 20
+  password: nopassword
+
+content: "name:${name}, age:${age}"

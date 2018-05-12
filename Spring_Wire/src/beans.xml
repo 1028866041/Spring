@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName" default-lazy-init="true">
+
+    <bean id="user" class="com.myself.impl.UserDAOImpl"
+        init-method="init" destroy-method="destroy">
+    <!--
+    <bean id="user1" class="com.myself.impl.UserDAOImpl">
+    -->
+        <property name="list">
+            <list>
+            <value>list1</value>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+            <value>set1</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+            <entry key="key1" value="value1"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--
+    <bean name="userService" class="com.myself.service.UserService" scope="prototype" autowire="byName">
+    </bean>
+    -->
+
+    <bean name="userService" class="com.myself.service.UserService" scope="prototype" autowire="byType">
+
+        <!--
+        <constructor-arg>
+            <ref bean="user"></ref>
+        </constructor-arg>
+
+        <property name="userDAO" ref="user"/>
+        -->
+    </bean>
+
+</beans>

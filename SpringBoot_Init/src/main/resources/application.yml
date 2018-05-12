@@ -1,0 +1,16 @@
+#注意yml语法
+spring:
+  profiles:
+    active: dev
+  server:
+    port: 8080
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: mc
+    password: meichao
+  jpa:
+    hibernate:
+      ddl.auto: create
+      dialect: MySQL5Dialect
+      show-sql: true

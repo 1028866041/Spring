@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdom:jdom:b10" type="repository">
+    <properties maven-id="jdom:jdom:b10" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jdom/jdom/b10/jdom-b10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
